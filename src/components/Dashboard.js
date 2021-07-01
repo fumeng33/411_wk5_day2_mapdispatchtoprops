@@ -43,16 +43,17 @@ const Dashboard = (props) => {
                         <TableCell>{car["cylinders"]}</TableCell>
                         <TableCell>{car["horsepower"]}</TableCell>
                         <TableCell>
-                            <DeleteIcon
-                                // add onClick method here
-                                className="icon text-red" />
+                            <DeleteIcon 
+                                 onClick={() => props.removeCar(idx)}
+                                className="icon text-red" 
+                                />
                         </TableCell>
                     </TableRow>
                 ))}
                 </TableBody>
             </Table>
         </Container>
-    )
-}
+    );
+};
 
 export default Dashboard
